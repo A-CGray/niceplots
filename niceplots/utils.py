@@ -28,7 +28,7 @@ def setRCParams():
     plt.rcParams["axes.spines.top"] = False
     plt.rcParams["axes.spines.right"] = False
 
-    plt.rcParams["axes.autolimit_mode"] = "round_numbers"
+    # plt.rcParams["axes.autolimit_mode"] = "round_numbers"
     plt.rcParams["axes.xmargin"] = 0
     plt.rcParams["axes.ymargin"] = 0
 
@@ -162,7 +162,7 @@ def draggable_legend(axis=None, color_on=True):
         legend[idx].draggable()
 
 
-def horiz_bar(labels, times, header, ts=1, nd=1, size=[5, 0.5], color="#FFCC00"):
+def horiz_bar(labels, times, header, ts=1, nd=1, size=[8.0, 4.0], color="#FFCC00"):
     """Creates a horizontal bar chart to compare positive numbers.
 
     'labels' contains the ordered labels for each data set
@@ -234,8 +234,8 @@ def horiz_bar(labels, times, header, ts=1, nd=1, size=[5, 0.5], color="#FFCC00")
 
         # Create border graphics if this is the top bar line
         if j == 0:
-            ax.text(left_header_pos, 1.02, header[0], fontsize=13)
-            ax.text(right_header_pos, 1.02, header[1], fontsize=13)
+            ax.text(left_header_pos, 1.02, header[0], fontsize=26)
+            ax.text(right_header_pos, 1.02, header[1], fontsize=26)
 
             line = Line2D(
                 [left_lim, right_lim + t_max * (0.15 + nd * 0.03)],
